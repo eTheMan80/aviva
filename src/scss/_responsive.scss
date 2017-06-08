@@ -1,0 +1,76 @@
+
+@media screen and (min-width: 500px) {
+  .gridLayout {
+    .blocks {margin:0;}
+    .block1 {
+      background: url(/img/tyreBG-d.jpg) center top no-repeat;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .showOnMobile {display:$displayNone;}
+  .showOnDesktop {display:$displayBlock;}
+  .banner {
+    img {margin:0 auto;}
+  }
+  .gridLayout {
+    .blocks {margin:0;}
+    .block1 {
+      background: url(/img/tyreBG-d.jpg) center top no-repeat;
+      padding:30px 15px 75px;
+      p {
+        width:40%;
+        &:nth-of-type(2) {
+          font-size:16px;
+        }
+      }
+    }
+    .block2 {
+      padding:110px 15px;
+      margin:0 0 0 15px;
+      width:300px;
+    }
+    .block3 {
+      width:300px;
+      margin:15px 0 0;
+      h2 {margin:0;}
+    }
+    .block4 {
+      margin:15px 0 0 15px;
+      a {
+        display:inline-block;
+        margin:40px 0 0;
+      }
+    }
+    .block5 {
+      clear:left;
+      width:300px;
+      margin:15px 0 0 0;
+      padding:53px 0;
+      img {
+        margin:60px auto 0;
+      }
+    }
+    .block6 {
+      width:250px;
+      margin:-115px 0 0 15px;
+    }
+    .block7 {
+      width:300px;
+      margin:-115px 0 0 15px;
+      h2 {
+        padding:42px 10px;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    text-align:center;
+    overflow:hidden;
+  }
+  .container {width:970px;}
+}

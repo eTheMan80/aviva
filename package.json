@@ -1,0 +1,41 @@
+{
+  "name": "npm-build-boilerplate",
+  "version": "1.2.0",
+  "description": "A set of common build tasks written with npm scripts.",
+  "author": "Emmanuel Ndibe",
+  "license": "MIT",
+  "keywords": [
+    "npm",
+    "scripts",
+    "npm scripts",
+    "watch",
+    "minify",
+    "compress"
+  ],
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "lint": "eslint src/js || true",
+    "lint-scss": "stylelint src/scss/*.scss --syntax scss || true",
+    "uglify": "mkdir dist/js -p && uglifyjs src/js/*.js -m -o dist/js/script.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
+    "serve": "browser-sync start --server --files '*.html, dist/css/*.css, dist/js/*.js'",
+    "build:css": "npm run lint-scss && npm run scss",
+    "build:js": "npm run lint && npm run uglify",
+    "build:all": "npm run build:css && npm run build:js",
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
+    "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
+    "watch:all": "npm-run-all -p serve watch:css watch:js",
+    "postinstall": "npm run build:all && npm run watch:all"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "eslint": "^3.19.0",
+    "gulp-sass": "^3.1.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^2.1.1",
+    "onchange": "^3.2.1",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.5.2",
+    "uglify-js": "^3.0.11"
+  }
+}

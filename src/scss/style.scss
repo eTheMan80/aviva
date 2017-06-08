@@ -1,0 +1,221 @@
+//style.scss
+
+@charset "utf-8";
+
+@import "font";
+
+@import "helper";
+
+body {margin:0;padding:0;}
+div {
+  box-sizing:border-box;
+}
+a {
+  text-decoration:none;
+  color:#000;
+}
+img {
+  max-width:100%;
+  display:block;
+}
+header {
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  button {
+    padding:11px 14px;
+    width:50px;
+    border:none;
+    background-color:#fff;
+    float:left;
+    span {
+      border:1px solid #999;
+      height:1px;
+      width:100%;
+      margin:0 0 5px;
+      display:block;
+    }
+  }
+  .logo {
+    float:left;
+    background-color:#ffd900;
+    padding:11px 10px;
+  }
+  .menuOptions {
+    display:inline-block;
+    margin:0 0 0 20%;
+    padding:10px 14px;
+    li {
+      list-style:none;
+      float:$floatLeft;
+    }
+  }
+}
+.wrapper {
+  width:100%;
+  padding:0;
+}
+.banner {
+  position:$positionRelative;
+  top:0;
+  .bannerText {
+    position:$positionAbsolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align:$alignCenter;
+    p {
+      font-family:$FrutigerLight;
+      font-size:18px;
+      line-height:25px;
+      color:#fff;
+      text-align:$alignCenter;
+      margin:0;
+    }
+    h1 {
+      font-family:$FrutigerLight;
+      font-size:32px;
+      line-height:42px;
+      color:#fff;
+      text-align:$alignCenter;
+      margin:10px 0 30px;
+    }
+    a {
+      font-family:$FrutigerBold;
+      font-size:12px;
+      line-height:26px;
+      color:#004fb6;
+      background-color:#ffd900;
+      padding:25px 34px;
+      border-radius:5px;
+    }
+  }
+}
+.gridLayout {
+  background-color:#efefef;
+  padding:30px 25px 0;
+  margin:0;
+  overflow:hidden;
+  h2 {
+    font-family:$FrutigerBold;
+    font-size:16px;
+    line-height:26px;
+    color:#333333;
+    text-align:$alignCenter;
+    margin:0 0 30px;
+  }
+  p {
+    font-family:$FrutigerLight;
+    font-size:18px;
+    line-height:24px;
+    .bold {font-family:$FrutigerBold;}
+  }
+  .container {padding:0;text-align:$alignCenter;}
+  .blocks {
+    margin:0 -15px 13px;
+  }
+  .block1 {
+    background: url(/img/tyreBG-m.png) center top no-repeat;
+    padding:30px 15px;
+    p {
+      &:nth-of-type(2) {
+        font-size:16px;
+      }
+    }
+  }
+  .block2 {
+    background-color:#ffd900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:120px 15px;
+    p {
+      color:#004fb6;
+    }
+  }
+  .block3 {
+    padding:0;
+    margin-right: -15px;
+    margin-left: -15px;
+    img {width:300px;}
+    h2 {
+      color:#004fb6;
+      background: #ffd800 url(/img/seemore.png) 95% center no-repeat;
+      padding:30px 10px;
+      text-align:$alignLeft;
+    }
+  }
+  .block4 {
+    background-color:#004fb6;
+    padding:84px 0 40px;
+    margin-top:-15px;
+    text-align:center;
+    h2 {
+      font-family:$FrutigerLight;
+      color:#fff;
+      padding:0 25px;
+    }
+    p {
+      font-family:$FrutigerBold;
+      font-size:12px;
+      line-height:44px;
+      border-top:1px solid #3372c5;
+      padding-top:30px;
+      color:#fff;
+      width:100px;
+      margin:0 auto;
+      text-align:$alignCenter;
+    }
+    a {
+      display:inline-block;
+      margin:40px 0 0;
+      &.rightArrow {margin-left:20px;}
+    }
+  }
+  .block5 {
+    background-color: #ffd900;
+    padding:107px 0 32px;
+    p {
+      color:#004fb6;
+      padding:0 50px;
+      text-align:$alignCenter;
+    }
+    img {
+      margin:65px auto 0;
+    }
+  }
+  .block6 {
+    background-color:#59b336;
+    padding:60px 0 30px;
+    img {
+      margin:0 auto;
+    }
+    p {
+      color:#fff;
+      padding:0 50px;
+      margin:26px 0 0;
+      text-align:$alignCenter;
+    }
+    a {
+      margin:45px 0 0;
+      color:#fff;
+      display:$displayBlock;
+      text-align:$alignCenter;
+    }
+  }
+  .block7 {
+    padding:0;
+    h2 {
+      color:#004fb6;
+      background: #ffd800 url(/img/seemore.png) 95% center no-repeat;
+      padding:30px 10px;
+      text-align:$alignLeft;
+    }
+  }
+}
+
+.showOnDesktop {display:$displayNone;}
+
+  @import "responsive";
